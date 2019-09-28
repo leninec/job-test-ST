@@ -11,6 +11,7 @@
 #include <vector>
 
 
+
 std::vector<int>  my_func(float k,float a[], int i);
 
 

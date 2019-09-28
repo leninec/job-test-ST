@@ -3,53 +3,36 @@
 #include <conio.h>
 #include "func.h"
 #include "test.h"
+#include "print.h"
 
 using namespace std;
-
-
-void PrintResult(const vector<int>& vect){
-	 cout<<"[";
-	       	    for (int c = 0 ; c<vect.size() ; ++c){
-	       	    				if(c<(vect.size()-1)){
-
-	       	    					cout<<vect[c]<<",";
-	       	    				}
-	       	    				else{
-	       	                    cout<<vect[c];
-	       	    				}
-	       	    }
-	       	    cout<<"],";
-	       	    cout<<vect.size()<<endl;
-}
-
 
 
 int main() {
 	/*************************************/
 	// unit test//
+	/*************************************/
+
 	float a1[3] ={3,4,3.58};
 	int k1 = 10;
 	int n1 = 3;
-	vector <int> dif1;
 	vector <int> difCheck;
 	difCheck.push_back(1);
-	difCheck.push_back(2);
+	TestFunction(a1,n1,k1,difCheck,"Test1");
+	//test 3
+	float a3[5] ={3.5, 3.1, 3.9, 4, 4.1};
+	int k3 = 10;
+	int n3 = 5;
+	vector <int> difCheck3;
+	difCheck3.push_back(2);
+	difCheck3.push_back(3);
+	difCheck3.push_back(4);
+	TestFunction(a3,n3,k3,difCheck3,"Test3");
 
-	dif1 = my_func(k1,a1,n1);
-	cout<< "Result        = ";
-	PrintResult(dif1);
-	cout<< "Right answear = ";
-	PrintResult(difCheck);
-	if (difCheck == dif1){
-		cout<<"test1 pass"<<endl;
-	}else
-	{
-		cout<<"test1 fail"<<endl;
-	}
-	cout<<endl;
+
 
 	/**************************************/
-
+/*
 		float a[8]; // source array
 		vector<int> dif; //  dif array
 		int i=0;
@@ -62,9 +45,7 @@ int main() {
 		cout<<"enter coefficient ";
 		cin>>k;
         dif = my_func(k,a,i);
-        PrintResult(dif);
-
-
-	//getch();
+        cout<<GetStringAnswer(dif)<<endl;
+/**/
 	return 0;
 }
