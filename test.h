@@ -10,10 +10,8 @@
 #include <iostream>
 #include <vector>
 #include "func.h"
-#include "print.h"
 
-
-
+using namespace std;
 
 void TestFunction( float m[], int n, int k, string answer, string nameTest){
 		vector <int> dif1;

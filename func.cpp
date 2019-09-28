@@ -6,10 +6,11 @@
  */
 
 #include "func.h"
-
+using namespace std;
 
 std::vector<int> my_func(float k,float a[],int n)
 {
+	//This func return vector  index of input array
 	std::vector<int> dif;
 	// Search max
 		float max = a[0];
@@ -25,6 +26,22 @@ std::vector<int> my_func(float k,float a[],int n)
 		   	   	      }
 		   	}
 	return dif;
+}
+string GetStringAnswer(const vector<int>& vect){
+	 //This func take vector, count his size and retutn answer string
+	 stringstream s;
+	 s<<"[";
+	       	    for (int c = 0 ; c<vect.size() ; ++c){
+	       	    		if(c<(vect.size()-1)){
+	       	    			s<<vect[c]<<",";
+	       	    		}
+	       	    		else{
+	       	    			s<<vect[c];
+	       	    		}
+	       	    }
+	       	    s<<"],";
+	       	    s<<vect.size();
+	       	    return s.str();
 }
 
 

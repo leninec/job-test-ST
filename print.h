@@ -17,7 +17,7 @@
 
 using namespace std;
 
-
+/*
 string GetStringAnswer(const vector<int>& vect){
 	 stringstream s;
 	 s<<"[";
@@ -33,4 +33,5 @@ string GetStringAnswer(const vector<int>& vect){
 	       	    s<<vect.size();
 	       	    return s.str();
 }
+*/
 #endif /* PRINT_H_ */
