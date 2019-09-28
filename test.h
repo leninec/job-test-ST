@@ -13,13 +13,23 @@
 #include "print.h"
 
 
-void TestFunction( float m[], int n, int k, const vector<int>& v, string nameTest){
+
+
+void TestFunction( float m[], int n, int k, string answer, string nameTest){
 		vector <int> dif1;
 		string result;
-		string answer;
 		dif1 = my_func(k,m,n);
 		result = GetStringAnswer(dif1);
-		answer = GetStringAnswer(v);
+		cout<<"------"<<nameTest<<"------"<<endl;
+		cout<<"Array = [";
+		for (int l = 0; l<n; l++){
+			if(l<(n-1)){
+				cout<<m[l]<<",";
+			}else{
+				cout<<m[l]<<"],";
+			}
+		}
+		cout<<" k = "<<k<<endl;
 		cout<< "Result        = "<<result<<endl;
 		cout<< "Right answear = "<<answer<<endl;
 		if (result == answer){

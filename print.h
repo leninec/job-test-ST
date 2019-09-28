@@ -22,18 +22,15 @@ string GetStringAnswer(const vector<int>& vect){
 	 stringstream s;
 	 s<<"[";
 	       	    for (int c = 0 ; c<vect.size() ; ++c){
-	       	    				if(c<(vect.size()-1)){
-
-	       	    					s<<vect[c]<<",";
-	       	    				}
-	       	    				else{
-	       	                    s<<vect[c];
-	       	    				}
+	       	    		if(c<(vect.size()-1)){
+	       	    			s<<vect[c]<<",";
+	       	    		}
+	       	    		else{
+	       	    			s<<vect[c];
+	       	    		}
 	       	    }
 	       	    s<<"],";
 	       	    s<<vect.size();
 	       	    return s.str();
 }
-
-
 #endif /* PRINT_H_ */
