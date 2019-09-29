@@ -13,7 +13,7 @@
 
 using namespace std;
 
-void TestFunction( float m[], int n, int k, string answer, string nameTest){
+void TestFunction(const float* m,int n, int k, string answer, string nameTest) {
 		vector <int> dif1;
 		string result;
 		dif1 = my_func(k,m,n);
@@ -31,12 +31,11 @@ void TestFunction( float m[], int n, int k, string answer, string nameTest){
 		cout<< "Result        = "<<result<<endl;
 		cout<< "Right answear = "<<answer<<endl;
 		if (result == answer){
-					cout<< nameTest<<" pass"<<endl;
-				}else
-				{
-					cout<< nameTest<<" F A I L !!!"<<endl;
-				}
-				cout<<endl;
+			cout<< nameTest<<" pass."<<endl;
+		}else{
+			cout<< nameTest<<" F A I L!!!"<<endl;
+		}
+		cout<<endl;
 }
 
 #endif /* TEST_H_ */

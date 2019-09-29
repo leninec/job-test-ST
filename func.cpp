@@ -8,24 +8,24 @@
 #include "func.h"
 using namespace std;
 
-std::vector<int> my_func(float k,float a[],int n)
+std::vector<int> my_func(float k,const float* a, int n)
 {
-	//This func return vector  index of input array
+	//This func return vector of index for input array
 	std::vector<int> dif;
 	// Search max
 		float max = a[0];
-		    for (int c = 0; c < n; ++c) {
-		        if (a[c] > max) {
-		            max = a[c];
-		        }
+		for (int c = 1; c < n; ++c) {
+		    if (a[c] > max) {
+		    	max = a[c];
 		    }
+		}
 	 // test coefficient
-		   	for (int c = 0; c < n; ++c) {
-		   	if ((std::abs(a[c]-max))<=(max*(k/100))) {
-		   	   	     dif.push_back(c);
-		   	   	      }
-		   	}
-	return dif;
+		for (int c = 0; c < n; ++c) {
+			if ((std::abs(a[c]-max))<=(max*(k/100))) {
+				dif.push_back(c);
+			}
+		}
+	 return dif;
 }
 string GetStringAnswer(const vector<int>& vect){
 	 //This func take vector, count his size and retutn answer string
